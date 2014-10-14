@@ -1,4 +1,4 @@
-personal-uark
-=============
+# Personal Page
 
-Personal Website for the University server.
+My personal page that is hosted on my University's servers: 
+http://csce.uark.edu/~bektemir/

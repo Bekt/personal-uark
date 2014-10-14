@@ -1,0 +1,40 @@
+body {
+  min-width: 800px;
+}
+
+.header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e5e5e5;
+  color: #777;
+}
+
+/* Non-responsive. */
+.container {
+  width: 800px;
+  max-width: none !important;
+}
+
+.lead {
+  font-size: 20px;
+}
+
+#profile-pic {
+  max-width: 200px;
+}
+
+h2 {
+    color: #666;
+}
+h3 {
+    margin-top: 0;
+}
+
+dt, dd {
+  padding: 3px 0;
+}

@@ -1,0 +1,152 @@
+
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Kanat Bektemirov at University of Arkansas</title>
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0/angular-sanitize.min.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+
+  <div class="container">
+    <div class="header">
+      <ul class="nav nav-pills pull-right">
+        <li ng-class="{active: views[0]}">
+          <a href="#" ng-click="toggle(0)">About</a>
+        </li>
+        <li ng-class="{active: views[1]}">
+          <a href="#" ng-click="toggle(1)">Experience</a>
+        </li>
+        <li ng-class="{active: views[2]}">
+          <a href="#" ng-click="toggle(2)">Coursework</a>
+        </li>
+        <li>
+          <a href="#">Capstone</a>
+        </li>
+        <li>
+          <a href="https://dl.dropboxusercontent.com/u/49883556/kanat_bektemirov_resume.pdf" target="_blank">Resume</a>
+        </li>
+      </ul>
+      <h2 class="text-info">Kanat Bektemirov</h2>
+    </div>
+
+    <div class="row" ng-show="views[0]">
+      <div class="col-xs-8">
+        <h2 class="muted">About</h2>
+        <p>
+          I am graduating with B.S in Computer Science (Honors) from the
+          University of Arkansas in May 2015. I am passionate about clean, well-designed, well-tested code.
+        </p>
+        <p>
+          <em>Research interests:</em>
+          machine learning, data and text mining, information retrieval.
+        </p>
+        <p>
+          <em>Career plans:</em>
+          After graduation, I will be working for $company as $title in $location.<br/>
+          In a couple of years, I would like to go to graduate school.
+        </p>
+      </div>
+      <div class="col-xs-4">
+          <h2> </h2>
+          <img src="http://csce.uark.edu/~bektemir/cp/me.jpg" id="profile-pic" class="img-rounded" alt="Kanat Bektemirov profile picture" />
+      </div>
+    </div>
+
+    <div class="row" ng-show="views[1]">
+
+      <div class="col-xs-6">
+        <h2>Work Experience</h2>
+
+        <h3 ng-repeat-start="job in jobs">
+          <a href="" ng-href="{{ job.company_url }}">{{ job.company }}</a>
+        </h3>
+        <p ng-repeat-end>
+          <span class="lead">{{ job.title }}</span> <br/>
+          {{ job.team }} <br/>
+          {{ job.duration }} <br/>
+          {{ job.location }}
+        </p>
+
+      </div>
+
+      <div class="col-xs-6">
+        <h2>Teaching Experience</h2>
+        <h3><a href="http://csce.uark.edu/">University of Arkansas</a></h3>
+        <p>
+          <span class="lead">Undergraduate TA - Algorithms</span> <br/>
+          August - December, 2013
+        </p>
+
+        <h2>Random Facts</h2>
+        <dl class="dl-horizontal">
+          <dt ng-repeat-start="fact in facts">{{ fact[0] }}</dt>
+          <dd ng-bind-html="fact[1]" ng-repeat-end></dd>
+        </dl>
+      </div>
+
+    </div>
+
+    <div class="row" ng-show="views[2]">
+
+      <div class="col-xs-12">
+        <h2>Coursework</h2>
+      </div>
+
+      <div class="col-xs-6">
+        <h3>Senior</h3>
+        <ul class="list-unstyled">
+          <li ng-repeat="course in courses[3]">{{ course }}</li>
+        </ul>
+
+        <h3>Sophomore</h3>
+        <ul class="list-unstyled">
+          <li ng-repeat="course in courses[1]">{{ course }}</li>
+        </ul>
+      </div>
+      <div class="col-xs-6">
+        <h3>Junior (First Semester)</h3>
+        <ul class="list-unstyled">
+          <li ng-repeat="course in courses[2]">{{ course }}</li>
+        </ul>
+
+        <h3>Freshman</h3>
+        <ul class="list-unstyled">
+          <li ng-repeat="course in courses[0]">{{ course }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p class="pull-right">
+        Last updated: October, 2014
+      </p>
+      <p>
+        &copy; Kanat Bektemirov - made with
+        <a href="https://angularjs.org">AngularJS</a>,
+        <a href="http://getbootstrap.com/">Bootstrap</a>,
+        <a href="https://github.com/Bekt/personal-uark">GitHub</a>,
+        and love.
+      </p>
+    </div>
+
+  </div>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-44101116-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
