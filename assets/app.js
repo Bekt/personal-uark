@@ -1,8 +1,8 @@
 var app = angular.module('app', ['ngSanitize']);
 
 app.controller('MainCtrl', function ($scope) {
-  // Order: about, experience, coursework
-  $scope.views = [true, false, false];
+  // Order: about, experience, coursework, capstone
+  $scope.views = [true, false, false, false];
 
   var job = function(company, company_url, title, team, duration, location) {
     return {
@@ -81,11 +81,11 @@ app.controller('MainCtrl', function ($scope) {
       'CSCE 4561 Capstone I',
       'ECON 2143 Basic Economic Theory',
     ],
-  ]
+  ];
 
   $scope.toggle = function(show_ind) {
     angular.forEach($scope.views, function(value, ind) {
-      $scope.views[ind] = ind == show_ind ? true : false;
+      $scope.views[ind] = ind == show_ind;
     });
   };
 

@@ -25,16 +25,17 @@ body {
 }
 
 #profile-pic {
-  max-width: 200px;
+  max-width: 230px;
 }
 
 h2 {
     color: #666;
 }
+
 h3 {
     margin-top: 0;
 }
 
-dt, dd {
+dt, dd, .list-unstyled li {
   padding: 3px 0;
 }
